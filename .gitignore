@@ -1,4 +1,5 @@
 /build/
+/.idea/
 /experiments/
 /node_modules/
 npm-debug.log

@@ -2,11 +2,11 @@
 	"variables": {
 		"GTK_Root%": "c:\\gtk",
 		"conditions": [
-		    [ "OS == 'mac'", {
-		        "pkg_env": "PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig"
-		    }, {
-		        "pkg_env": ""
-		    }]
+			[ "OS == 'mac'", {
+				"pkg_env": "PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig"
+			}, {
+				"pkg_env": ""
+			}]
 		]
 	},
 	"targets": [
@@ -17,9 +17,9 @@
 				"src/Enums.cc",
 				"src/Autocrop.cc"
 			],
-                        "include_dirs": [
-                               "<!(node -e \"require('nan')\")" 
-                        ],
+			"include_dirs": [
+				"<!(node -e \"require('nan')\")" 
+			],
 			"variables": {
 				"packages": "librsvg-2.0 cairo-png cairo-pdf cairo-svg",
 				"conditions": [
@@ -33,9 +33,10 @@
 				]
 			},
 			"conditions": [
-				[ "OS=='linux'", {
+				[ "OS!='mac' and OS!='win'", {
 					"cflags": [
-						"<@(cflags)"
+						"<@(cflags)",
+						"-std=c++0x"
 					],
 					"ldflags": [
 						"<@(ldflags)"

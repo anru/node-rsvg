@@ -6,12 +6,7 @@
 #include <node_object_wrap.h>
 #include <librsvg/rsvg.h>
 #include "nan.h"
-
-#if NODE_VERSION_AT_LEAST(0, 11, 3)
-    #define ARGTYPE v8::FunctionCallbackInfo<v8::Value>
-#else
-    #define ARGTYPE v8::Arguments
-#endif
+#include "compat.h"
 
 class Rsvg : public node::ObjectWrap {
 public:
@@ -38,13 +33,14 @@ private:
 	static NAN_METHOD(HasElement);
 	static NAN_METHOD(Autocrop);
 	static NAN_METHOD(Render);
-        static v8::Handle<v8::Value> GetStringProperty(const char* property, const ARGTYPE& args);
-        static void SetStringProperty(const char* property, const ARGTYPE& args);
-        static v8::Handle<v8::Value> GetNumberProperty(const char* property, const ARGTYPE& args);
-        static void SetNumberProperty(const char* property, const ARGTYPE& args);
-        static v8::Handle<v8::Value> GetIntegerProperty(const char* property, const ARGTYPE& args);
-        static void SetIntegerProperty(const char* property, const ARGTYPE& args);
-	static v8::Persistent<v8::Function> constructor;
+        static v8::Local<v8::String> GetStringProperty(const char* property, const ARGTYPE& ARGVAR);
+        static void SetStringProperty(const char* property, const ARGTYPE& ARGVAR);
+        static v8::Local<v8::Number> GetNumberProperty(const char* property, const ARGTYPE& ARGVAR);
+        static void SetNumberProperty(const char* property, const ARGTYPE& ARGVAR);
+        static v8::Local<v8::Integer>  GetIntegerProperty(const char* property, const ARGTYPE& ARGVAR);
+        static void SetIntegerProperty(const char* property, const ARGTYPE& ARGVAR);
+	static Nan::Persistent<v8::Function> constructor;
+  static void propGetter(v8::Local<v8::String> name, const v8::PropertyCallbackInfo<v8::Value>& info);
 	RsvgHandle* const _handle;
 };
 

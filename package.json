@@ -1,6 +1,6 @@
 {
   "name": "librsvg",
-  "version": "0.5.2",
+  "version": "0.6.4",
   "description": "Parse SVG files and render them as PNG, PDF, SVG, or raw memory buffer images.",
   "keywords": [
     "svg",
@@ -16,14 +16,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/anru/node-rsvg.git"
+    "url": "https://github.com/2gis/node-rsvg.git"
   },
   "scripts": {
     "test": "gulp test"
   },
   "dependencies": {
     "bindings": "~1.2.0",
-    "nan": "^1.8.4"
+    "nan": "^2.4.0"
   },
   "devDependencies": {
     "chai": "~1.8.1",

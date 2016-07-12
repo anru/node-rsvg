@@ -4,6 +4,7 @@
 #include <cairo.h>
 #include <node.h>
 #include "nan.h"
+#include "compat.h"
 
 typedef enum {
 	RENDER_FORMAT_INVALID = -1,

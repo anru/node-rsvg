@@ -20,7 +20,7 @@ gulp.task('test', function() {
         timeout: 3000,
         ui: 'bdd',
         reporter: 'spec',
-        require: ['test/helpers/chai']
+        require: ['./test/helpers/chai.js']
     };
 
     return gulp.src([

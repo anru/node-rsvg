@@ -1,8 +1,22 @@
 language: node_js
+env:
+  - CXX=g++-4.8
 node_js:
   - "0.10"
+  - "0.12"
   - "2"
+  - "iojs"
+  - "4"
+  - "5"
+  - "node"
 before_script:
   - sudo apt-get update -qq
   - sudo apt-get install -qq librsvg2-dev
   - npm install -g grunt-cli
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-4.8
+    - g++-4.8

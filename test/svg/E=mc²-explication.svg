@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='ISO-8859-1' standalone='no'?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN'
+	'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg xmlns='http://www.w3.org/2000/svg'
+	xmlns:xlink='http://www.w3.org/1999/xlink' 
+	xml:space='preserve' width='600' height='324'>
+
+<!--		  E=mc²-explication.svg
+	
+		Created February 04, 2013
+		    By Jason Barnabas
+		      For Wikipedia
+	
+		 jtbarnabas(at)yahoo.com		-->
+
+<g fill='#6DCFF6'>
+	<rect width='600' height='300' rx='16' ry='16' />
+</g>
+<g stroke='white' stroke-width='5' stroke-linecap="round">
+	<line x1='210' y1='120'	x2='30' y2='50'/>
+	<line x1='200' y1='180'	x2='100' y2='230'/>
+	<line x1='340' y1='135'	x2='180' y2='50'/>
+	<line x1='330' y1='180'	x2='120' y2='230'/>
+	<line x1='385' y1='135'	x2='450' y2='50'/>
+	<line x1='370' y1='180'	x2='320' y2='230'/>
+</g>
+<g fill='#C7EAFD'>
+	<rect x='25' y='35' width='550' height='50'/>
+	<rect x='25' y='215' width='550' height='50'/>
+</g>
+<g text-anchor='middle'>
+	<g font-family='Arial'>
+		<g font-size='36'>
+			<text x='300' y='70'>energy | mass | speed of light</text>
+			<text x='300' y='250'>J | kg | 299,792,458 m/s</text>
+		</g>
+		<g font-size='24' fill='white'>
+			<text x='300' y='25'>value</text>
+			<text x='300' y='290'>units</text>
+		</g>
+	</g>
+	<g font-style='italic'>
+		<text font-size='72' x='300' y='174'>E = mc²</text>
+		<text font-size='24' x='300' y='320'>c² = 89,875,517,873,681,800 m²/s²</text>
+	</g>
+</g>
+</svg>

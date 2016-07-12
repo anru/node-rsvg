@@ -40,9 +40,9 @@ Handle<Value> RenderFormatToString(render_format_t format) {
 		format == RENDER_FORMAT_VIPS ? "vips" :
 		NULL;
         if (formatString) {
-                return NanNew<String>(formatString);
+                return Nan::New<String>(formatString).ToLocalChecked();
         } else {
-                return NanNull();
+                return Nan::Null();
         }
 }
 
@@ -80,8 +80,8 @@ Handle<Value> CairoFormatToString(cairo_format_t format) {
 #endif
 		NULL;
         if (formatString) {
-                return NanNew<String>(formatString);
+                return Nan::New<String>(formatString).ToLocalChecked();
         } else {
-                return NanNull();
+                return Nan::Null();
         }
 }
